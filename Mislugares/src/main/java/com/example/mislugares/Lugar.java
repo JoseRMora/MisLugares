@@ -1,7 +1,5 @@
 package com.example.mislugares;
 
-import com.example.mislugares.GeoPunto;
-
 public class Lugar {
     private String nombre;
     private String direccion;
