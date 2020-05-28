@@ -13,7 +13,7 @@ public class Lugar {
     private TipoLugar tipo;
 
     //Constructor
-    package Lugar(String nombre, String direccion, double longitud,
+    public Lugar(String nombre, String direccion, double longitud,
                  double latitud, double altura, TipoLugar tipo, int telefono, String url, String comentario,
                  int valoracion) {
         fecha = System.currentTimeMillis();
