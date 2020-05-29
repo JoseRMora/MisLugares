@@ -4,8 +4,6 @@ import java.util.Objects;
 
 public class GeoPunto {
 
-
-    //Clase prueba de Java
     private double longitud, latitud;
 
     static public GeoPunto SIN_POSICION = new GeoPunto(0.0,0.0);
