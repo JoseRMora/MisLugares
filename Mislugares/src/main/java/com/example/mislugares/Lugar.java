@@ -1,7 +1,5 @@
 package com.example.mislugares;
 
-import com.example.mislugares.GeoPunto;
-
 public class Lugar {
     private String nombre;
     private String direccion;
@@ -12,10 +10,11 @@ public class Lugar {
     private String comentario;
     private long fecha;
     private float valoracion;
+    private TipoLugar tipo;
 
     //Constructor
     public Lugar(String nombre, String direccion, double longitud,
-                 double latitud, double altura, int telefono, String url, String comentario,
+                 double latitud, double altura, TipoLugar tipo, int telefono, String url, String comentario,
                  int valoracion) {
         fecha = System.currentTimeMillis();
         posicion = new GeoPuntoAlt(longitud, latitud, altura);
@@ -25,6 +24,7 @@ public class Lugar {
         this.url = url;
         this.comentario = comentario;
         this.valoracion = valoracion;
+        this.tipo = tipo;
     }
 
     //Setter and Getter
@@ -100,6 +100,14 @@ public class Lugar {
         this.valoracion = valoracion;
     }
 
+    public TipoLugar getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoLugar tipo) {
+        this.tipo = tipo;
+    }
+
     @Override
     public String toString() {
         return "Lugar{" +
@@ -112,6 +120,7 @@ public class Lugar {
                 ", comentario='" + comentario + '\'' +
                 ", fecha=" + fecha +
                 ", valoracion=" + valoracion +
+                ", tipo=" + tipo +
                 '}';
     }
 }
